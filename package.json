@@ -4,7 +4,7 @@
 	"description": "Generate a NodeJS server based on Typescript from your API Swagger files.Get your server to a blazing start with this extension.",
 	"version": "0.0.1",
 	"engines": {
-		"vscode": "^1.33.0"
+		"vscode": "^1.32.0"
 	},
 	"author": {
 		"name": "Adithya Sreyaj",
@@ -16,10 +16,9 @@
 		"Other"
 	],
 	"keywords": [
-		"cicd",
-		"sonarqube",
-		"dockerfile",
-		"jenkinsfile"
+		"swagger",
+		"node server",
+		"typescript"
 	],
 	"icon": "images/logo.png",
 	"repository": {
@@ -27,13 +26,13 @@
 		"url": "https://github.com/adisreyaj/vscode-cicd-assistant.git"
 	},
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.generateServer"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [{
-			"command": "extension.helloWorld",
-			"title": "Hello World"
+			"command": "extension.generateServer",
+			"title": "Generate Node Server from Swagger File"
 		}]
 	},
 	"scripts": {
@@ -52,5 +51,9 @@
 		"webpack": "^4.29.6",
 		"webpack-cli": "^3.3.0",
 		"ts-loader": "^5.3.3"
+	},
+	"dependencies": {
+		"@types/js-yaml": "^3.12.1",
+		"js-yaml": "^3.13.0"
 	}
 }
