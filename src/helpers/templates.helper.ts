@@ -17,7 +17,6 @@ export const appTSFile = `
 import * as bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import express from 'express';
-import mongoose from 'mongoose';
 import { MainRoute } from './routes/main.route';
 
 dotenv.config({ path: '.env' });
@@ -25,7 +24,6 @@ dotenv.config({ path: '.env' });
 export class App {
 	public app: express.Application;
 	public route: MainRoute;
-	private mongoUrl = process.env.MONGODB_URI;
 
 	constructor() {
 		this.app = express();
@@ -68,8 +66,6 @@ export const packageFile = `
 			"cors": "^2.8.5",
 			"dotenv": "^6.2.0",
 			"express": "^4.16.4",
-			"mongoose": "^5.4.16",
-			"morgan": "^1.9.1",
 			"winston": "^3.2.1"
 		},
 		"devDependencies": {
@@ -80,12 +76,9 @@ export const packageFile = `
 			"@types/express": "^4.16.1",
 			"@types/jest": "^24.0.9",
 			"@types/lodash": "^4.14.121",
-			"@types/mongoose": "^5.3.20",
-			"@types/morgan": "^1.7.35",
 			"@types/supertest": "^2.0.7",
 			"chai": "^4.2.0",
 			"jest": "^24.1.0",
-			"mongodb-memory-server": "^3.1.2",
 			"supertest": "^3.4.2",
 			"ts-jest": "^24.0.0",
 			"tslint": "^5.13.1",
