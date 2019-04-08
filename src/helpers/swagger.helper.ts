@@ -2,10 +2,12 @@ import * as fs from "fs";
 import * as vscode from "vscode";
 import { serverTSFile, appTSFile, packageFile } from "./templates.helper";
 import { checkFileExists } from "./fs.helper";
+
 let rootPath: string;
 if (vscode.workspace.workspaceFolders) {
   rootPath = vscode.workspace.workspaceFolders[0].uri.fsPath;
 }
+
 export function createFolderStructure(): void {
   try {
     if (!checkFileExists(rootPath, "src/")) {
@@ -25,6 +27,7 @@ export function createFolderStructure(): void {
     console.log(err);
   }
 }
+
 export function createServerFile(): void {
   try {
     fs.writeFileSync(`${rootPath}/server.ts`, serverTSFile);
@@ -32,6 +35,7 @@ export function createServerFile(): void {
     console.log(err);
   }
 }
+
 export function createAppFile(): void {
   try {
     fs.writeFileSync(`${rootPath}/app.ts`, appTSFile);

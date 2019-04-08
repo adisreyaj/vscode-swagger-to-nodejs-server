@@ -13,6 +13,7 @@ export function readYamlFile() {
         )
       );
     }
+    
     const indentedJson = JSON.stringify(config, null, 4);
     if (vscode.workspace.workspaceFolders) {
       fs.appendFileSync(

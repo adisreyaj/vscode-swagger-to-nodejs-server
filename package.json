@@ -30,10 +30,12 @@
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
-		"commands": [{
-			"command": "extension.generateServer",
-			"title": "Generate Node Server from Swagger File"
-		}]
+		"commands": [
+			{
+				"command": "extension.generateServer",
+				"title": "Generate Node Server from Swagger File"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "webpack --mode production",
