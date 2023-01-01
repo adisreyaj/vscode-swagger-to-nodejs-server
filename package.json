@@ -50,9 +50,9 @@
 		"tslint": "^5.12.1",
 		"@types/node": "^10.12.21",
 		"@types/mocha": "^2.2.42",
-		"webpack": "^4.29.6",
-		"webpack-cli": "^3.3.0",
-		"ts-loader": "^5.3.3"
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.1",
+		"ts-loader": "^9.4.2"
 	},
 	"dependencies": {
 		"@types/js-yaml": "^3.12.1",
